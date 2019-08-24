@@ -1,0 +1,10 @@
+.acomp{
+  &.input, .title{
+    margin: 1rem;
+    height: 2rem;
+    label + input, input + label{
+      margin-left: 1rem;
+    }
+  }
+}
+

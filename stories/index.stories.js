@@ -4,14 +4,11 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
-import { Button, Welcome } from "@storybook/react/demo";
 import Input from "../src/input";
 import Toggle from "../src/toggle";
 import Alert from "../src/alert";
 
-storiesOf("Welcome", module).add("to Storybook", () => (
-  <Welcome showApp={linkTo("Button")} />
-));
+import Form from "./form";
 
 storiesOf("Input", module)
   .add("nothing added", () => <Input />)
@@ -27,18 +24,51 @@ storiesOf("Input", module)
   .add("type email", () => <Input type="email" defaultValue="not email" />)
   .add("two inputs", () => (
     <div>
-      <Input type="email" defaultValue="not email" />
-      <Input defaultValue="hi!" />
+      <Input type="email" defaultValue="not email" title="email" />
+      <Input defaultValue="hi!" title="name" />
     </div>
+  ))
+  .add("label right", () => (
+    <Input
+      type="email"
+      defaultValue="not email"
+      label="right side"
+      labelRight
+    />
+  ))
+  .add("Group", () => (
+    <Input.Group  onSubmit={() => console.log("executing!")}>
+      <Input type="text" labelRight defaultValue="not email" label="left" />
+    </Input.Group>
   ));
+
+storiesOf("Form", module).add("form", () => <Form />);
 
 storiesOf("Toggle", module)
   .add("default", () => <Toggle />)
-  .add("checked", () => <Toggle checked />);
+  .add("checked", () => <Toggle checked />)
+  .add("label", () => <Toggle label="label text" />);
+// .add("checked", () => <Toggle checked />)
 
 storiesOf("Alert", module)
   .add("default", () => <Alert />)
-  .add("custom alert & show", () => <Alert text="custom alert" show={true}/>)
-  .add("long alert & show", () => <Alert text="A very long alert with a lot of information that is very long and longer and longer and longer " show={true}/>)
-  .add("Max width", () => <Alert text="A very long alert with a lot of information that is very long and longer and longer and longer " show={true}/>)
-  .add("Max width with title", () => <Alert title='A title' text="A very long alert with a lot of information that is very long and longer and longer and longer " show={true}/>)
+  .add("custom alert & show", () => <Alert text="custom alert" show={true} />)
+  .add("long alert & show", () => (
+    <Alert
+      text="A very long alert with a lot of information that is very long and longer and longer and longer "
+      show={true}
+    />
+  ))
+  .add("Max width", () => (
+    <Alert
+      text="A very long alert with a lot of information that is very long and longer and longer and longer "
+      show={true}
+    />
+  ))
+  .add("Max width with title", () => (
+    <Alert
+      title="A title"
+      text="A very long alert with a lot of information that is very long and longer and longer and longer "
+      show={true}
+    />
+  ));

@@ -1,0 +1,30 @@
+.acomp.toggle {
+  display: inline-flex;
+  .switch {
+    width: 6rem;
+    height: 3rem;
+    background: grey;
+    display: block;
+    .move {
+      width: 2rem;
+      height: 2rem;
+      background-color: whitesmoke;
+      display: inline-block;
+      margin: 0.5rem;
+    }
+    &.checked {
+      background: blueviolet;
+      .move {
+        float: right;
+      }
+    }
+  }
+  input {
+    display: none;
+  }
+  p {
+    margin: auto;
+    padding-left: 1rem;
+    font-size: 2rem;
+  }
+}

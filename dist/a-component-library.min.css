@@ -1,8 +1,14 @@
 .acomp {
-  font-size: 20px;
+  font-size: 15px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
 
-.alert {
+.acomp.input, .acomp .title {
+  margin: 1rem;
+  height: 2rem; }
+  .acomp.input label + input, .acomp.input input + label, .acomp .title label + input, .acomp .title input + label {
+    margin-left: 1rem; }
+
+.acomp.alert {
   display: none;
   height: 10rem;
   width: 40rem;
@@ -15,10 +21,34 @@
   color: antiquewhite;
   position: absolute;
   border-radius: .5rem; }
-  .alert.show {
+  .acomp.alert.show {
     display: block; }
-  .alert .closebtn {
+  .acomp.alert .closebtn {
     cursor: pointer;
     position: absolute;
     top: 1rem;
     right: 1rem; }
+
+.acomp.toggle {
+  display: inline-flex; }
+  .acomp.toggle .switch {
+    width: 6rem;
+    height: 3rem;
+    background: grey;
+    display: block; }
+    .acomp.toggle .switch .move {
+      width: 2rem;
+      height: 2rem;
+      background-color: whitesmoke;
+      display: inline-block;
+      margin: 0.5rem; }
+    .acomp.toggle .switch.checked {
+      background: blueviolet; }
+      .acomp.toggle .switch.checked .move {
+        float: right; }
+  .acomp.toggle input {
+    display: none; }
+  .acomp.toggle p {
+    margin: auto;
+    padding-left: 1rem;
+    font-size: 2rem; }

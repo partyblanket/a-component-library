@@ -1,19 +1,23 @@
 import React, { useState } from "react";
+import "../index.scss";
+import './toggle.scss';
 
-function Toggle({ checked }) {
-  const [checkedState, setCheckedState] = useState(false || checked);
+function Toggle({ checked, label }) {
+  const [checkedState, setCheckedState] = useState(checked);
   function clickHandler() {
     setCheckedState(!checkedState);
   }
   return (
-    <div>
+    <label class={"acomp toggle"}>
       <input
-        class={"acomp"}
         checked={checkedState}
         type="checkbox"
-        onClick={clickHandler}
       />
-    </div>
+      <span class={'switch ' + (checkedState ? 'checked' : '')} onClick={clickHandler}>
+        <span class='move '></span>
+      </span>
+      <p>{label}</p>
+    </label>
   );
 }
 
