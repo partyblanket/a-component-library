@@ -2,33 +2,6 @@
   font-size: 15px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
 
-.acomp.input, .acomp .title {
-  margin: 1rem;
-  height: 2rem; }
-  .acomp.input label + input, .acomp.input input + label, .acomp .title label + input, .acomp .title input + label {
-    margin-left: 1rem; }
-
-.acomp.alert {
-  display: none;
-  height: 10rem;
-  width: 40rem;
-  left: 50%;
-  margin-left: -20rem;
-  top: 50%;
-  margin-top: -5rem;
-  background: red;
-  padding: 2rem;
-  color: antiquewhite;
-  position: absolute;
-  border-radius: .5rem; }
-  .acomp.alert.show {
-    display: block; }
-  .acomp.alert .closebtn {
-    cursor: pointer;
-    position: absolute;
-    top: 1rem;
-    right: 1rem; }
-
 .acomp.toggle {
   display: inline-flex; }
   .acomp.toggle .switch {
@@ -52,3 +25,30 @@
     margin: auto;
     padding-left: 1rem;
     font-size: 2rem; }
+
+.acomp.alert {
+  display: none;
+  height: 10rem;
+  width: 40rem;
+  left: 50%;
+  margin-left: -20rem;
+  top: 50%;
+  margin-top: -5rem;
+  background: red;
+  padding: 2rem;
+  color: antiquewhite;
+  position: absolute;
+  border-radius: .5rem; }
+  .acomp.alert.show {
+    display: block; }
+  .acomp.alert .closebtn {
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem; }
+
+.acomp.input, .acomp .title {
+  margin: 1rem;
+  height: 2rem; }
+  .acomp.input label + input, .acomp.input input + label, .acomp .title label + input, .acomp .title input + label {
+    margin-left: 1rem; }
