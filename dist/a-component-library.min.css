@@ -1,2 +1,20 @@
-div {
-  background: red; }
+.alert {
+  display: none;
+  height: 10rem;
+  width: 40rem;
+  left: 50%;
+  margin-left: -20rem;
+  top: 50%;
+  margin-top: -5rem;
+  background: red;
+  padding: 2rem;
+  color: antiquewhite;
+  position: absolute;
+  border-radius: .5rem; }
+  .alert.show {
+    display: block; }
+  .alert .closebtn {
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem; }

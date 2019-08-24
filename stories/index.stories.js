@@ -25,13 +25,20 @@ storiesOf("Input", module)
     <Input type="password" defaultValue="im hidden" />
   ))
   .add("type email", () => <Input type="email" defaultValue="not email" />)
-  .add('two inputs', () => (<div><Input type="email" defaultValue="not email" /><Input defaultValue="hi!" /></div>));
-  
+  .add("two inputs", () => (
+    <div>
+      <Input type="email" defaultValue="not email" />
+      <Input defaultValue="hi!" />
+    </div>
+  ));
 
 storiesOf("Toggle", module)
   .add("default", () => <Toggle />)
   .add("checked", () => <Toggle checked />);
 
-  storiesOf("Alert", module)
+storiesOf("Alert", module)
   .add("default", () => <Alert />)
-  .add("checked", () => <Alert checked />);
+  .add("custom alert & show", () => <Alert text="custom alert" show={true}/>)
+  .add("long alert & show", () => <Alert text="A very long alert with a lot of information that is very long and longer and longer and longer " show={true}/>)
+  .add("Max width", () => <Alert text="A very long alert with a lot of information that is very long and longer and longer and longer " show={true}/>)
+  .add("Max width with title", () => <Alert title='A title' text="A very long alert with a lot of information that is very long and longer and longer and longer " show={true}/>)
