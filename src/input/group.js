@@ -6,14 +6,14 @@ function Group({ children, onSubmit, labelRight, title }) {
   );
 
   function handleSubmit(e) {
-    e.preventDefault()
-    const inputItems = e.target.getElementsByTagName('input')
-    const filteredItems = [...inputItems].filter(el => el.type != 'submit')
+    e.preventDefault();
+    const inputItems = e.target.getElementsByTagName("input");
+    const filteredItems = [...inputItems].filter(el => el.type != "submit");
     onSubmit(filteredItems);
   }
   return (
     <form class="acomp inputGroup" onSubmit={handleSubmit}>
-      <h2 class='title'>{title}</h2>
+      <h2 class="title">{title}</h2>
       {childrenWithPassedProps}
     </form>
   );

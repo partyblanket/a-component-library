@@ -13,6 +13,9 @@ import Form from "./form";
 storiesOf("Input", module)
   .add("nothing added", () => <Input />)
   .add("default value", () => <Input defaultValue="hi!" />)
+  .add("checkbox", () => <Input type="checkbox" />)
+  .add("radio", () => <Input type="radio" />)
+
   .add("placeholder value", () => <Input placeholder="im here" />)
   .add("placeholder and default value", () => (
     <Input defaultValue="hi!" placeholder="im here" />
@@ -37,7 +40,7 @@ storiesOf("Input", module)
     />
   ))
   .add("Group", () => (
-    <Input.Group  onSubmit={() => console.log("executing!")}>
+    <Input.Group onSubmit={() => console.log("executing!")}>
       <Input type="text" labelRight defaultValue="not email" label="left" />
     </Input.Group>
   ));
@@ -59,13 +62,13 @@ storiesOf("Alert", module)
       show={true}
     />
   ))
-  .add("Max width", () => (
+  .add("Max width*", () => (
     <Alert
       text="A very long alert with a lot of information that is very long and longer and longer and longer "
       show={true}
     />
   ))
-  .add("Max width with title", () => (
+  .add("Max width with title*", () => (
     <Alert
       title="A title"
       text="A very long alert with a lot of information that is very long and longer and longer and longer "
