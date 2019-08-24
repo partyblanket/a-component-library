@@ -1,6 +1,8 @@
 src/
 test/
 demo/
+.storybook/
+stories/
 .npmignore
 .babelrc
 .gitignore
