@@ -1,6 +1,6 @@
 {
   "name": "a-component-library",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "",
   "main": "dist/a-component-library.min.js",
   "scripts": {

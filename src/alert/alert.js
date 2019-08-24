@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import "../index.scss";
 import "./alert.scss";
 
 function Alert({ text = "Alert!", show = false, title }) {
@@ -8,7 +9,7 @@ function Alert({ text = "Alert!", show = false, title }) {
   }
 
   return (
-    <div class={"alert " + (visible ? "show" : "")}>
+    <div class={"acomp alert " + (visible ? "show" : "")}>
       <h3 class="title">{title}</h3>
       <span class="closebtn" onClick={clickHandler}>
         &times;

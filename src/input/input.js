@@ -7,6 +7,7 @@ function Input({ type = 'text', defaultValue, placeholder }) {
   }
   return (
     <input
+      class={'acomp'}
       type={type}
       defaultValue={defaultValue}
       value={value}

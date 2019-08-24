@@ -1,4 +1,3 @@
-//Toggle Switch
 import React, { useState } from "react";
 
 function Toggle({ checked }) {
@@ -8,7 +7,12 @@ function Toggle({ checked }) {
   }
   return (
     <div>
-      <input checked={checkedState} type="checkbox" onClick={clickHandler} />
+      <input
+        class={"acomp"}
+        checked={checkedState}
+        type="checkbox"
+        onClick={clickHandler}
+      />
     </div>
   );
 }
