@@ -1,33 +1,32 @@
+$alert-width: 40rem;
+
 .acomp.alert {
   display: none;
-  height: 10rem;
-  width: 40rem;
+  height: auto;
+  width: $alert-width;
   left: 50%;
-  margin-left: -20rem;
+  margin-left: $alert-width / -2;
   top: 50%;
-  margin-top: -5rem;
+  margin-top: -10rem;
   background: red;
   padding: 2rem;
   color: antiquewhite;
-  // margin: 1rem;
   position: absolute;
   border-radius: .5rem;
-  p {
-    // color: black;
+  * {
+    margin: 0;
+    color: whitesmoke;
   }
   &.show{
     display: block;
   }
-
 
   .closebtn{
     cursor: pointer;
     position: absolute;
     top: 1rem;
     right: 1rem;
-    &:hover{
-      
-    }
+    font-size: 1.5rem;
   }
   
 }

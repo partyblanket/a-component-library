@@ -2,15 +2,21 @@ import React, { useState } from "react";
 import "../index.scss";
 import './toggle.scss';
 
-function Toggle({ checked, label }) {
+// TODO
+// css transition (float doesnt allow transition)
+// make rounded version
+
+function Toggle({ checked, label, onChange }) {
   const [checkedState, setCheckedState] = useState(checked);
   function clickHandler() {
-    setCheckedState(!checkedState);
+    const newState = !checkedState;
+    setCheckedState(newState);
+    onChange && onChange(newState);
   }
   return (
     <label className={"acomp toggle"}>
       <input
-        checked={checkedState}
+        defaultChecked={checkedState}
         type="checkbox"
       />
       <span className={'switch ' + (checkedState ? 'checked' : '')} onClick={clickHandler}>

@@ -48,19 +48,19 @@ storiesOf("Input", module)
 storiesOf("Form", module)
   .add("form", () => <Form />)
   .add("form map", () => (
-    <Input.Group labelRight onSubmit={(e) => console.log(e)}>
+    <Input.Group labelRight onSubmit={e => console.log(e)}>
       {[{ label: "Name" }, { label: "Email" }, { label: "Phone" }].map(el => (
         <Input label={el.label} />
       ))}
-      <Input type='submit' />
+      <Input type="submit" />
     </Input.Group>
   ));
 
 storiesOf("Toggle", module)
   .add("default", () => <Toggle />)
   .add("checked", () => <Toggle checked />)
-  .add("label", () => <Toggle label="label text" />);
-// .add("checked", () => <Toggle checked />)
+  .add("label", () => <Toggle label="label text" />)
+  .add("with onChange", () => <Toggle onChange={(e) => console.log(e)} />);
 
 storiesOf("Alert", module)
   .add("default", () => <Alert />)
