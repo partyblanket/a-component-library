@@ -1,8 +1,14 @@
 import React, { cloneElement } from "react";
 
-function Group({ children, onSubmit, labelRight, title }) {
+function Group({ children, onSubmit, labelRight, title, onChange }) {
+  
+  const passedProps = {
+    labelRight,
+    onChange
+  };
+  
   const childrenWithPassedProps = React.Children.toArray(children).map(el =>
-    cloneElement(el, labelRight && { labelRight })
+    cloneElement(el, passedProps)
   );
 
   function handleSubmit(e) {
@@ -11,9 +17,10 @@ function Group({ children, onSubmit, labelRight, title }) {
     const filteredItems = [...inputItems].filter(el => el.type != "submit");
     onSubmit(filteredItems);
   }
+  
   return (
-    <form class="acomp inputGroup" onSubmit={handleSubmit}>
-      <h2 class="title">{title}</h2>
+    <form className="acomp inputGroup" onSubmit={handleSubmit}>
+      <h2 className="title">{title}</h2>
       {childrenWithPassedProps}
     </form>
   );

@@ -8,13 +8,13 @@ function Toggle({ checked, label }) {
     setCheckedState(!checkedState);
   }
   return (
-    <label class={"acomp toggle"}>
+    <label className={"acomp toggle"}>
       <input
         checked={checkedState}
         type="checkbox"
       />
-      <span class={'switch ' + (checkedState ? 'checked' : '')} onClick={clickHandler}>
-        <span class='move '></span>
+      <span className={'switch ' + (checkedState ? 'checked' : '')} onClick={clickHandler}>
+        <span className='move '></span>
       </span>
       <p>{label}</p>
     </label>

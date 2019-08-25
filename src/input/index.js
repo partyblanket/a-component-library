@@ -1,5 +1,5 @@
 import Input from "./input";
-import Group from "./group"
+import Group from "./group";
 
 Input.Group = Group;
 

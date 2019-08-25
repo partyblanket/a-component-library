@@ -27,10 +27,12 @@ import {Input} from "a-component-library";
 Name | Default | Values | Description
 ------------ | ------------- | - | -
 type | text | text, email, password, submit |
-defaultValue  | *none* | *any string* |
-placeholder | *none* | *any string* |
-label | *none* | *any string* | 
-titleRight | false | true, false |
+defaultValue  | *none* | *string* |
+placeholder | *none* | *string* |
+label | *none* | *string* | 
+titleRight | false | *bool* |
+onChange | *parent's onChange* | *callback function* | use onChange if you want to manage input state yourself
+value | *none* | *your app's state* | use in combination with onChange to handle change
 
 ```javascript
 <Input.Group>
@@ -39,8 +41,11 @@ titleRight | false | true, false |
 ```
 Name | Default | Values | Description
 ------------ | ------------- | - | -
-onSubmit | *none* | *any function* |
-labelRight | false | true | 
+onSubmit | *none* | *callback function* |
+labelRight | false | *bool* | 
+title | *none* | *string* |
+onChange | *none* | *callback function* | use onChange if you want to manage state yourself
+
 
 
 ### Toggle Switch

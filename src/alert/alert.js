@@ -9,9 +9,9 @@ function Alert({ text = "Alert!", show = false, title }) {
   }
 
   return (
-    <div class={"acomp alert " + (visible ? "show" : "")}>
-      <h3 class="title">{title}</h3>
-      <span class="closebtn" onClick={clickHandler}>
+    <div className={"acomp alert " + (visible ? "show" : "")}>
+      <h3 className="title">{title}</h3>
+      <span className="closebtn" onClick={clickHandler}>
         &times;
       </span>
       <p>{text}</p>

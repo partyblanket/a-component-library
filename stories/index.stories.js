@@ -45,7 +45,16 @@ storiesOf("Input", module)
     </Input.Group>
   ));
 
-storiesOf("Form", module).add("form", () => <Form />);
+storiesOf("Form", module)
+  .add("form", () => <Form />)
+  .add("form map", () => (
+    <Input.Group labelRight onSubmit={(e) => console.log(e)}>
+      {[{ label: "Name" }, { label: "Email" }, { label: "Phone" }].map(el => (
+        <Input label={el.label} />
+      ))}
+      <Input type='submit' />
+    </Input.Group>
+  ));
 
 storiesOf("Toggle", module)
   .add("default", () => <Toggle />)
